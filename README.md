@@ -1,2 +1,2 @@
-# Personal-Project-BDO-Calculator
+# BDO Blood Wolves Calculator
 A simple loot calculator for Black Desert Online, currently only made for 1 specific game location
