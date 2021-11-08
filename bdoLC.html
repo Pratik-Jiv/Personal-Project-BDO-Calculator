@@ -1,0 +1,54 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>BDO Loot Calculator</title>
+    <script src="bdoLC.js"></script>
+
+</head>
+<body style="width:100%">
+    <h1>BDO Simple Loot calculator</h1>
+    <p style="font-size:10px;"> Note effective totals may be off by 5% </p>
+    <br>
+    <br>
+    <div id="node" style="display:block;">
+        <h3>Blood Wolf Settlement</h3>
+        <h5 style="float:left">
+            Node level
+            <select id="level" onchange="updateProjection()">
+                <option value="0">Zero</option>
+                <option value="1">One</option>
+                <option value="2">Two</option>
+                <option value="3">Three</option>
+                <option value="4">Four</option>
+                <option value="5">Five</option>
+                <option value="6">Six</option>
+                <option value="7">Seven</option>
+                <option value="8">Eight</option>
+                <option value="9">Nine</option>
+                <option value="10">Ten</option>
+            </select>
+        </h5>
+    </div>
+    <div style="margin-top:100px;float:left;width:80%">
+        <p> Session Duration (minutes) <input type="number" value="0" id="duration"> <button onclick="showTable()"> Start </button> </p>
+    </div>
+    <div id="table" style="display:none;float:left;width:80%">
+        <p>Value pack buff <input type="checkbox" id="valpack" onchange="update()"></p>
+        <p>Blood Wolf Mane <input type="number" placeholder="0" id="Blood Wolf Mane (Trash)" class="loot" name="2120" onkeyup="update()"></p>
+        <p>Tooth of a Blood Wolf <input type="number" placeholder="0" id="Tooth of a Blood Wolf (Trash)" class="loot" name="830" onkeyup="update()"></p>
+        <p>Magic Stone Fragment <input type="number" placeholder="0" id="Magic Stone Fragment (Trash)" class="loot" name="760" onkeyup="update()"></p>
+        <p>Black Energy Residue <input type="number" placeholder="0" id="Black Energy Residue (Trash)" class="loot" name="3000" onkeyup="update()"></p>
+        <p>Ancient Spirit Dust <input type="number" placeholder="0" id="Ancient Spirit Dust (Trash)" class="loot" name="3000" onkeyup="update()"></p>
+        <p>Black Stone (Armor) <input type="number" placeholder="0" id="Black Stone Armor" class="loot" name="182000" onkeyup="update()"></p>
+        <p>Black Stone (Weapon) <input type="number" placeholder="0" id="Black Stone Weapon" class="loot" name="241000" onkeyup="update()"></p>
+        <p>Caphras Stone <input type="number" placeholder="0" id="Caphras Stone" class="loot" name="2590000" onkeyup="update()"></p>
+        <p>Garmoth Scale <input type="number" placeholder="0" id="Garmoth Scale" class="loot" name="850000" onkeyup="update()"></p>
+        <p>Dragon Scale Fossil <input type="number" placeholder="0" id="Dragon Scale Fossil" class="loot" name="242000" onkeyup="update()"></p>
+        <button onclick="calc()"> Calculate </button>
+        <br>
+        <br>
+    </div>
+</body>
+</html>
